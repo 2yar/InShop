@@ -1,0 +1,22 @@
+<h1>Главная страница Юзеров</h1>
+
+<table>
+	<tr>
+		<th> ID </th>
+		<th> Full Name </th>
+		<th> Phone </th>
+		<th> Notes </th>
+		<th> Avatar </th>
+	</tr>
+
+	<% @users.each do |i| %>
+	<tr>
+		<th><%= i.id %></th>
+		<th><%= i.first_name + i.last_name %></th>
+		<th><%= i.phone %></th>
+		<th><%= i.notes %></th>
+		<th><%= i.avatar_file %></th>
+	</tr>
+
+	<% end %>
+</table>
