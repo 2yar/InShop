@@ -1,0 +1,4 @@
+<%= form_for :products, url: products_path(@article), method: :put do |f| %>
+
+<%= f.label :image %><br />
+<%= f.file_field :image %><br />
