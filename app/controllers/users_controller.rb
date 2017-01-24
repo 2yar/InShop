@@ -1,41 +1,31 @@
 class UsersController < ApplicationController
 
-
-	def index
-		@users = User.all
-	end
-
-	def new
-		
-	end
-
-	def create
-		@user = User.create( user_params )
-		
-	end
-
+	before_action :authenticate_user! 
+	
 	def edit
+		@user = User.find(params[:id])
 		
 	end
 
 	def update
-		
+		@user = User.current_user
+			if @user.update_attributes( user_params)
+				redirect_to(user_path(@user))
+			else
+				render 'show'				
+			end
 	end
 
 	def show
-		
+		@user = User.find(params[:id])
 	end
 
-	def destroy
-		
-	end
 	
-
-
 	private
 
+
 	def user_params
-		params.require(:user).permit(:avatar_file, :first_name, :last_name, :phone, :notes)
+		params.require(:user).permit(:phone, :first_name, :last_name, :notes, :avatar_file)
 	end
 
 
