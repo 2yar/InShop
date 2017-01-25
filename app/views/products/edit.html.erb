@@ -1,0 +1,27 @@
+<div class="products edit">
+	<h2> Update product </h2>
+		<%= form_for @product, url: products_path, html: { multipart: true } do |f| %>
+		<table summary="Products from fields">
+			<tr>
+      			<th>name</th>
+      			<td><%= f.text_field(:name) %></td>
+      		</tr>
+	      	<tr>
+	      		<th>Description</th>
+	      		<td><%= f.text_field(:description) %></td>
+	      	</tr>
+	      	<tr>
+	      		<th>Price</th>
+	      		<td><%= f.text_field(:price) %></td>
+	      	</tr>
+ 		</table>
+
+ 		<%= f.file_field :image_file %>
+
+
+ 		<div class="actions" >
+    	<%= f.submit "Update Product" %>
+  		</div>
+ 	<% end %>
+</div>
+<%= link_to 'Back', products_path %>

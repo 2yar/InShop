@@ -1,0 +1,32 @@
+<div class="product show">
+	<h2> Your details </h2>
+
+
+	<table summary="Products details views">
+		<tr>
+      		<th>name</th>
+      		<td><%= @product.name %></td>
+      	</tr>
+      	<tr>
+      		<th>Description</th>
+      		<td><%= @product.description %></td>
+      	</tr>
+      	<tr>
+      		<th>Image</th>
+      		<td><%= @product.image_file %></td>
+      	</tr>
+      	<tr>
+      		<th>Price</th>
+      		<td><%= @product.price %></td>
+      	</tr>
+      	<tr>
+      		<th> Updated </th>
+      		<td><%= @product.updated_at %></td>
+    	</tr>
+ 	</table>
+</div>
+<%= link_to 'Back', products_path %>
+
+
+	 
+	 
