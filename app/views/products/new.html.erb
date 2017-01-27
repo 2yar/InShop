@@ -9,12 +9,12 @@
 			<ul>
 				<% @product.errors.full_messages.each do |msg| %>
 					<li><%= msg %></li>
-					<% end %>
+				<% end %>
 			</ul>
 		</div>
 	<% end %>
 		
- <div class="field">
+	<div class="field">
 		<%= f.label :name%><br>
 		<%= f.text_field :name %>
 	</div>
