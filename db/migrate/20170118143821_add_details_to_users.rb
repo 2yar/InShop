@@ -6,6 +6,5 @@ class AddDetailsToUsers < ActiveRecord::Migration[5.0]
   	add_column :users, :is_admin,    :boolean, default: true
   	add_column :users, :notes,			 :string,	 limit: 	250
   	add_column :users, :is_active,	 :boolean, default: true
-  	add_column :users, :avatar_file, :string
   end
 end
