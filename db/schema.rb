@@ -12,19 +12,18 @@
 
 ActiveRecord::Schema.define(version: 20170127110644) do
 
-  create_table "products", force: :cascade do |t|
-    t.float    "price"
-    t.float    "weight"
-    t.string   "name"
-    t.string   "description"
-    t.string   "image_file"
-    t.integer  "amount",             default: 0
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-  end
-
+	create_table "products", force: :cascade do |t|
+		t.float    "price"
+		t.float    "weight"
+		t.string   "name"
+		t.string   "description"
+		t.string   "image_file"
+		t.integer  "amount",             default: 0
+		t.datetime "created_at",                     null: false
+		t.datetime "updated_at",                     null: false
+		t.string   "image_file_name"
+		t.string   "image_content_type"
+		t.integer  "image_file_size"
+		t.datetime "image_updated_at"
+	end
 end

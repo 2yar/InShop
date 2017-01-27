@@ -3,31 +3,31 @@
 		<%= form_for :product, url: product_path(@products), method: :put do |f| %>
 		<table summary="Products from fields">
 			<tr>
-      			<th>name</th>
-      			<td><%= f.text_field(:name) %></td>
-      		</tr>
-	      	<tr>
-	      		<th>Description</th>
-	      		<td><%= f.text_field(:description, rows: 6) %></td>
-	      	</tr>
-	      	<tr>
-	      		<th>Price</th>
-	      		<td><%= f.text_field(:price) %></td>
-	      	</tr>
-	      	<tr>
-	      		<th>image</th>
-	      		<td><%= link_to image_tag(@products.image.url(:med)), @products.image.url %></td>
-	      		<td><%= f.file_field(:image) %></td>
-	      	</tr>
-	    </table>
+						<th>name</th>
+						<td><%= f.text_field(:name) %></td>
+					</tr>
+					<tr>
+						<th>Description</th>
+						<td><%= f.text_field(:description, rows: 6) %></td>
+					</tr>
+					<tr>
+						<th>Price</th>
+						<td><%= f.text_field(:price) %></td>
+					</tr>
+					<tr>
+						<th>image</th>
+						<td><%= link_to image_tag(@products.image.url(:med)), @products.image.url %></td>
+						<td><%= f.file_field(:image) %></td>
+					</tr>
+			</table>
 
- 		
+		
 
 
- 		<div class="actions" >
-    		<%= f.submit "Update Product" %>
-  		</div>
- 	<% end %>
+		<div class="actions" >
+				<%= f.submit "Update Product" %>
+			</div>
+	<% end %>
 </div>
 
 

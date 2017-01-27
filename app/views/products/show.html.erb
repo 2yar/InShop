@@ -1,28 +1,27 @@
 <div class="product show">
-      <h2> Your details </h2>
+  <h2> Your details </h2>
 
-
-      <table summary="Products details views">
-            <tr>
-                  <th>name</th>
-                  <td><%= @products.name %></td>
-            </tr>
-            <tr>
-                  <th>Description</th>
-                  <td><%= @products.description %></td>
-            </tr>
-            <tr>
-                  <th>Image</th>
-                  <td><%= link_to image_tag(@products.image.url(:med)), @products.image.url %></td>
-            </tr>
-            <tr>
-                  <th>Price</th>
-                  <td><%= @products.price %></td>
-            </tr>
-            <tr>
-                  <th> Updated </th>
-                  <td><%= @products.updated_at %></td>
-      </tr>
-      </table>
+  <table summary="Products details views">
+    <tr>
+      <th>name</th>
+      <td><%= @products.name %></td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><%= @products.description %></td>
+    </tr>
+    <tr>
+      <th>Image</th>
+      <td><%= link_to image_tag(@products.image.url(:med)), @products.image.url %></td>
+    </tr>
+    <tr>
+      <th>Price</th>
+      <td><%= @products.price %></td>
+    </tr>
+    <tr>
+      <th> Updated </th>
+      <td><%= @products.updated_at %></td>
+    </tr>
+  </table>
 </div>
 <%= link_to("Back to list", products_path, class: 'back-link')%>
