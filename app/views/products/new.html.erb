@@ -1,6 +1,6 @@
 <%= form_for :product, url: products_path, html: { multipart: true } do |f| %>
 
-	<% if @products.errors.any? %>
+	<% if @product.errors.any? %>
 		<div id="error_explanation">
 			<h2>
 				<%= pluralize(@product.errors.count, "error") %> prohibited

@@ -5,45 +5,41 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @products = Product.new
+    @product = Product.new
   end 
 
   def create
-    @products = Product.create( product_params )
+    @product = Product.create( product_params )
     respond_to do |format|
-      if @products.save
-        format.html { redirect_to @products, notice: 'product was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @product }
+      if @product.save
+        format.html { redirect_to @product, notice: 'product was successfully created.' }
       else
         format.html { render action: 'new' }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
   end
   
   def edit
-    @products = Product.find(params[:id])
+    @product = Product.find(params[:id])
   end
 
   def update
-    @products = Product.find(params[:id])
-    if @products.update(product_params)
-    redirect_to @products
+    @product = Product.find(params[:id])
+    if @product.update(product_params)
+      redirect_to @product
     else
       render 'edit'
     end
   end
  
   def show
-    @products = Product.find(params[:id])
+    @product = Product.find(params[:id])
   end
 
-  def destroy
-    @products = Product.find(params[:id])
-    if @products.present?
-      @products.destroy
-    end
-      redirect_to root_url
+ def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    redirect_to root_url
   end
     
   private
