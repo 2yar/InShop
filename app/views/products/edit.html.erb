@@ -1,10 +1,10 @@
 <div class="products edit">
   <h2> Update product </h2>
-    <%= form_for :product, url: product_path(@product), method: :put do |f| %>
+  <%= form_for :product, url: product_path(@product), method: :put do |f| %>
     <table summary="Products from fields">
       <tr>
-          <th>name</th>
-          <td><%= f.text_field(:name) %></td>
+        <th>name</th>
+        <td><%= f.text_field(:name) %></td>
       </tr>
       <tr>
         <th>Description</th>
@@ -20,9 +20,11 @@
       <td><%= f.file_field(:image) %></td>
       </tr>
     </table>
+    
     <div class="actions" >
       <%= f.submit "Update Product" %>
     </div>
   <% end %>
 </div>
+
 <%= link_to("Back to list", products_path, class: 'back-link')%>
