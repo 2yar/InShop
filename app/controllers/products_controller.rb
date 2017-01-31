@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-
   def index
     @products = Product.all
   end
@@ -9,7 +8,7 @@ class ProductsController < ApplicationController
   end 
 
   def create
-    @product = Product.create( product_params )
+    @product = Product.create(product_params)
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'product was successfully created.' }
@@ -43,6 +42,7 @@ class ProductsController < ApplicationController
   end
     
   private
+  
   def product_params
     params.require(:product).permit(:price, :name, :description, :image)
   end
