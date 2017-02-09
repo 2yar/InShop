@@ -1,4 +1,5 @@
 class User::RegistrationsController < Devise::RegistrationsController
+  before_action :authenticate_user!
 
   private
   def account_update_params

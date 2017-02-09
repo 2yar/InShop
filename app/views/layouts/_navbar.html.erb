@@ -1,0 +1,36 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">
+    <%= image_tag("logo.png", class: "d-inline-block align-top", size: "30", alt: "Logo") %>
+    InShop
+  </a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to 'Cart', '#', class: "nav-link" %> 
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Contacts', '#', class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Support', '#', class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Register', new_user_session_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> <span class="hidden-sm-down">Profile</span></a>
+        <div class="dropdown-menu dropdown-primary dd-right" aria-labelledby="dropdownMenu1" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          <%= link_to 'My account', edit_user_registration_path, class: "dropdown-item" %>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
