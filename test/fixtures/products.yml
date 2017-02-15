@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+   float: MyString
+  : 
+  float: MyString
+  : 
+  string: MyString
+  : 
+  string: MyString
+  : 
+  string: MyString
+  : 
+  integer: MyString
+  : 
+
+two:
+   float: MyString
+  : 
+  float: MyString
+  : 
+  string: MyString
+  : 
+  string: MyString
+  : 
+  string: MyString
+  : 
+  integer: MyString
+  : 
